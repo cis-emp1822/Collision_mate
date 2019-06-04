@@ -1,3 +1,4 @@
+import 'package:flutter_web/cupertino.dart';
 import 'package:flutter_web/material.dart';
 import 'package:flutter_web/foundation.dart';
 import 'examples/index.dart';
@@ -26,21 +27,75 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Responsive Examples'),
+      appBar: null ,
+      body:Container(
+         padding: new EdgeInsets.all(25.0),
+        child: Center(
+          child: Padding(
+            padding:  EdgeInsets.all(MediaQuery.of(context).size.width*0.14),
+          child: Column(
+             mainAxisAlignment: MainAxisAlignment.center,
+  crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              
+              Image.asset('collision.png'),
+               Padding(padding: EdgeInsets.only(bottom: 40.0)),
+              TextFormField(
+      keyboardType: TextInputType.emailAddress,
+      autofocus: false,
+      decoration: InputDecoration(
+        hintText: 'Email',
+        contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(16),
+         ),
+          
       ),
-      body: ListView(
-        children: <Widget>[
-          ListTile(
-            title: Text('Responsive List'),
-            onTap: () => _goToScreen(context, ListExample()),
-          ),
-          ListTile(
-            title: Text('Responsive Layout'),
-            onTap: () => _goToScreen(context, LayoutExample()),
-          ),
-        ],
+      validator: (val) {
+                        if(val.length==0) {
+                          return "Email cannot be empty";
+                        }else{
+                          return null;
+                        }
+                      },
+
+                      style: new TextStyle(
+                        fontFamily: "Poppins",
+                      ),
       ),
+       Padding(padding: EdgeInsets.only(bottom: 40.0)),
+      TextFormField(
+      autofocus: false,
+      obscureText: true,
+      decoration: InputDecoration(
+        hintText: 'Password',
+        contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+        border: OutlineInputBorder( borderRadius: BorderRadius.circular(16),),
+      ),
+    ),Padding(
+      padding: EdgeInsets.symmetric(vertical: 16.0),
+      child: RaisedButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
+        ),
+        onPressed: () {
+          _goToScreen(context, LayoutExample());
+        },
+        padding: EdgeInsets.all(12),
+        color: Colors.lightBlueAccent,
+        child: Text('Log In', style: TextStyle(color: Colors.white)),
+      ),
+    ), FlatButton(
+      child: Text(
+        'Forgot password?',
+        style: TextStyle(color: Colors.black54),
+      ),
+      onPressed: () {},
+    ),
+            ],
+          ),
+          ),
+        ),
+      )
     );
   }
 
