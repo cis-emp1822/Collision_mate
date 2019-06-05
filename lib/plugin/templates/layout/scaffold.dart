@@ -1,5 +1,4 @@
 import 'package:flutter_web/material.dart';
-
 class ResponsiveScaffold extends StatelessWidget {
   const ResponsiveScaffold({
     this.scaffoldKey,
@@ -91,8 +90,8 @@ class ResponsiveScaffold extends StatelessWidget {
                 ),
                 if (floatingActionButton != null) ...[
                   Positioned(
-                    top: 100.0,
-                    left: _drawerWidth - 30,
+                    bottom: 100.0,
+                    right: _drawerWidth - 30,
                     child: floatingActionButton,
                   )
                 ],
@@ -147,8 +146,8 @@ class ResponsiveScaffold extends StatelessWidget {
                   ),
                   if (floatingActionButton != null) ...[
                     Positioned(
-                      top: 10.0,
-                      left: 10.0,
+                      bottom: 10.0,
+                      right: 10.0,
                       child: floatingActionButton,
                     )
                   ],
@@ -190,7 +189,7 @@ class ResponsiveScaffold extends StatelessWidget {
           ),
           body: body,
           floatingActionButton: floatingActionButton,
-          floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+         // floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         );
       },
     );

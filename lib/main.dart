@@ -26,13 +26,21 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+  double horizontal =
+            MediaQuery.of(context).size.width<720? 
+            MediaQuery.of(context).size.width*0.15 :
+            MediaQuery.of(context).size.width<1440?
+            MediaQuery.of(context).size.width*0.34:
+            MediaQuery.of(context).size.width*0.38;
+  
     return Scaffold(
       appBar: null ,
       body:Container(
          padding: new EdgeInsets.all(25.0),
         child: Center(
           child: Padding(
-            padding:  EdgeInsets.all(MediaQuery.of(context).size.width*0.14),
+            padding:EdgeInsets.fromLTRB(horizontal, 10.0, horizontal, 10.0)
+             ,
           child: Column(
              mainAxisAlignment: MainAxisAlignment.center,
   crossAxisAlignment: CrossAxisAlignment.center,
