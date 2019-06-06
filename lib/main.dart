@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
               
               Image.asset('collision.png'),
                Padding(padding: EdgeInsets.only(bottom: 40.0)),
-              TextFormField(
+              TextField(
       keyboardType: TextInputType.emailAddress,
       autofocus: false,
       decoration: InputDecoration(
@@ -58,26 +58,16 @@ class HomePage extends StatelessWidget {
          ),
           
       ),
-      validator: (val) {
-                        if(val.length==0) {
-                          return "Email cannot be empty";
-                        }else{
-                          return null;
-                        }
-                      },
-
-                      style: new TextStyle(
-                        fontFamily: "Poppins",
-                      ),
+      
       ),
        Padding(padding: EdgeInsets.only(bottom: 40.0)),
-      TextFormField(
+      TextField(
       autofocus: false,
       obscureText: true,
       decoration: InputDecoration(
         hintText: 'Password',
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-        border: OutlineInputBorder( borderRadius: BorderRadius.circular(16),),
+        border: OutlineInputBorder(borderSide: BorderSide(color: Colors.greenAccent, width: 5.0),),
       ),
     ),Padding(
       padding: EdgeInsets.symmetric(vertical: 16.0),

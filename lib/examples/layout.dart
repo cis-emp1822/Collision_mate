@@ -71,30 +71,7 @@ class LayoutExampleState extends State<LayoutExample>{
          child:ListView(
     
         children: <Widget>[
-          ListTile(
-            leading: Icon(Icons.filter_list),
-            title: Text('Filter List'),
-            subtitle: Text('Hide and show items'),
-            trailing: Switch(
-              value: true,
-              onChanged: (val) {},
-            ),
-          ),
-          ListTile(
-            title: Slider(
-              value: 0.5,
-              onChanged: (val) { },
-            ),
-          ),
-          ListTile(
-            leading: Icon(Icons.sort_by_alpha),
-            title: Text('Sort List'),
-            subtitle: Text('Change layout behavior'),
-            trailing: Switch(
-              value: false,
-              onChanged: (val) {},
-            ),
-          ),
+          
         ],
       ),) ,
       trailing: IconButton(
