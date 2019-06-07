@@ -53,6 +53,7 @@ class HomePage extends StatelessWidget {
       autofocus: false,
       decoration: InputDecoration(
         hintText: 'Email',
+        labelText: "email",
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16),
          ),
@@ -66,6 +67,7 @@ class HomePage extends StatelessWidget {
       obscureText: true,
       decoration: InputDecoration(
         hintText: 'Password',
+        labelText: "password",
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
         border: OutlineInputBorder(borderSide: BorderSide(color: Colors.greenAccent, width: 5.0),),
       ),
