@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
         hintText: 'Password',
         labelText: "password",
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-        border: OutlineInputBorder(borderSide: BorderSide(color: Colors.greenAccent, width: 5.0),),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(16),),
       ),
     ),Padding(
       padding: EdgeInsets.symmetric(vertical: 16.0),
