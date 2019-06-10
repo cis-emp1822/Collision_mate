@@ -55,8 +55,8 @@ class HomePage extends StatelessWidget {
         hintText: 'Email',
         labelText: "email",
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(16),
-         ),
+        border: null // OutlineInputBorder(borderRadius: BorderRadius.circular(16),
+         //),
           
       ),
       
@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
         hintText: 'Password',
         labelText: "password",
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(16),),
+        border: null //OutlineInputBorder(borderRadius: BorderRadius.circular(16),),
       ),
     ),Padding(
       padding: EdgeInsets.symmetric(vertical: 16.0),
